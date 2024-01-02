@@ -1,0 +1,35 @@
+{
+    "name": "Light theme for huntzone.varshevsky.com",
+    "description": "Light theme for huntzone.varshevsky.com",
+    "version": "0.0.1",
+    "manifest_version": 3,
+    "icons": {
+        "16": "/images/icon-16x16.png",
+        "32": "/images/icon-32x32.png",
+        "48": "/images/icon-48x48.png",
+        "128": "/images/icon-128x128.png"
+    },
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": {
+            "16": "/images/icon-16x16.png",
+            "32": "/images/icon-32x32.png",
+            "48": "/images/icon-48x48.png",
+            "128": "/images/icon-128x128.png"
+        }
+    },
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ],
+    "content_scripts": [{
+        "matches": [
+           "https://huntzone.varshevsky.com/*"
+        ],
+        "js": [
+            "js/light-theme.js",
+            "js/image-links.js",
+            "index.js"
+        ]
+    }]
+}
